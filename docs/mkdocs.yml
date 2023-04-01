@@ -1,3 +1,3 @@
 site_name: Ultimate Transcendence
-site_dir: .github/workflows/publish
+site_dir: .github/workflows
 theme: readthedocs
