@@ -13,13 +13,13 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
         with:
-          python-version: 3.x
+          python-version: 3.9.x
       - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
       - uses: actions/cache@v3
         with:
           key: mkdocs-material-${{ env.cache_id }}
           path: .cache
-          restore-keys: |
+          clear-keys: |
             mkdocs-material-
       - run: pip install mkdocs-material 
       - run: cd docs && ls
