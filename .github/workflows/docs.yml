@@ -1,23 +1,25 @@
-name: 공식 문서 배포
-
+name: ci 
 on:
-  workflow_dispatch:
   push:
-    branches: [main]
-
-defaults:
-  run:
-    working-directory: docs
-
+    branches:
+      - master 
+      - main
+permissions:
+  contents: write
 jobs:
   deploy:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
         with:
-          cache: pip
-
-      - run: pip install mkdocs
-      - run: mkdocs build --verbose --clean
+          python-version: 3.x
+      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
+      - uses: actions/cache@v3
+        with:
+          key: mkdocs-material-${{ env.cache_id }}
+          path: .cache
+          restore-keys: |
+            mkdocs-material-
+      - run: pip install mkdocs-material 
       - run: mkdocs gh-deploy --force

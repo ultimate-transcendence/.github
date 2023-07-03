@@ -1,3 +1,4 @@
-site_name: Ultimate Transcendence
-site_dir: .github/workflows
-theme: readthedocs
+site_name: My Docs
+
+theme:
+  name: material
