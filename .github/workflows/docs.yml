@@ -22,5 +22,4 @@ jobs:
           clear-keys: |
             mkdocs-material-
       - run: pip install mkdocs-material 
-      - run: cd docs && ls
-      - run: mkdocs gh-deploy --force
+      - run: cd docs && mkdocs gh-deploy --force
