@@ -1,5 +1,22 @@
-# About Page
+# 참고한 자료
 
-## How About You??
+## 언어
+### javascript
 
-I'm Fine.
+### typescript
+
+## 프론트엔드
+### react
+
+### next.js
+
+### 물리엔진
+## 백엔드
+
+### nest.js
+
+### typeorm
+
+### postgresql
+
+## 웹소켓
