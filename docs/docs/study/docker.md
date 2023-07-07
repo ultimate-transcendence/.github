@@ -40,3 +40,4 @@ docker build -t [이미지 이름] .
 ```shell
 # -d: 백그라운드 -p: 포트 --name: 컨테이너 이름 설정
 docker run -d -p 3000:3000 --name [컨테이너 이름] [이미지 이름]
+```
