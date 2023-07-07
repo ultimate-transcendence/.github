@@ -1,4 +1,4 @@
-# 참고한 자료
+# reference
 
 ## 언어
 ### javascript
